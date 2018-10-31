@@ -118,3 +118,7 @@ p::first-line{
 :not(p) + p::first-line {
 	font-variant: small-caps;
 }
+
+.institucional {
+	text-align: center;
+}

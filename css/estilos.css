@@ -347,5 +347,42 @@ footer .container {
 	
 }
 
+.destaque {
+	position: relative;
+}
 
+.pause,
+.play {
+	display: block;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
 
+.pause {
+	border-left: 25px solid #900;
+	border-bottom: 15px solid transparent;
+	border-top: 15px solid transparent;
+}
+
+.play {
+	border-left: 25px solid #900;
+	border-bottom: 15px solid transparent;
+	border-top: 15px solid transparent;
+}
+
+.painel li:nth-child(n+7) {
+	display:none;
+}
+
+.painel-aberto li:nth-child(n+7) {
+	display: inline-block;
+}
+
+body {
+	font-family: 'PT Sans', sans-serif;
+}
+
+.novidades h2 {
+	font-family: 'Bab Script', sans-serif;
+}

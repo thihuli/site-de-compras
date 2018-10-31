@@ -1,40 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    
-    <title>Mirror Fashion</title>
 
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/produto-pagina.css">
-</head>
 <body>
-
-        <header class="container">
-                <h1><img src="img/logo-mirro-fashion.png" alt="Logo da Mirror Fashion"></h1>
-           
-                <p class="sacola">
-                    Nenhum item na sacola de compras
-                </p>
-           
-                <nav class="menu-opcoes">
-           <ul>
-               <li><a href="#">Sua Conta</a></li>
-               <li><a href="#">Lista de desejos</a></li>
-               <li><a href="#">Cartão Fidelidade</a></li>
-               <li><a href="Sobre.html">Sobre</a></li>
-               <li><a href="#">Ajuda</a></li>
-           </ul>
-           </nav>            
-         </header>
-
-
-
-
-
-         <!-- adicionar conteúdo da página-->
+    <?php
+    $cabecalho_css = '<link rel="stylesheet" href="css/produto-pagina.css">';
+    $cabecalho_title = "Produtos da Mirror Fashion"; 
+    include("cabecalho.php"); ?>
+ 
+<!-- adicionar conteúdo da página-->
          
     <div class="produto-back">
         <div class="container">
@@ -43,7 +14,9 @@
              <p>por apenas R$129,90</p>
         
 
-         <form>
+         <form action="checkout.php" method="POST">
+              <input	type="hidden" name="nome" value="Fuzzy	Cardigan">
+              <input	type="hidden" name="preco" value="129,00">
              <fieldset class="cores">
                  <legend>Escolha a cor:</legend>
                  
@@ -63,9 +36,10 @@
                  </label>
              </fieldset>
 
-        <fieldset class="tamnhos">
-            <legend>Escolha seu tamnho:</legend>
-            <input type="range" min="36" max="46" value="42" step="2" name="tamnho" id="tamnho">
+        <fieldset class="tamanho">
+            <legend>Escolha seu tamanho:</legend>
+            <input type="range" min="36" max="46" value="42" step="2" name="tamanho" id="tamanho">
+            <output for="tamanho" name="valortamanho">42</output>
         </fieldset>
 
              <button class="comprar">Comprar</button>
@@ -130,6 +104,6 @@
 
 
 
-    
+        <script type="text/javascript" src="js/produtos-pagina.js"></script>
 </body>
 </html>

@@ -9,8 +9,31 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Mirror Fashion</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="img/logo-mirro-fashion.png" alt="logo-mirro-fashion"></a>
+       
+        <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+            <ul class="navbar-nav nav justify-content-center ">
+                <li class="nav-item active">
+                    <a class="nav-link" href="Sobre.php">Sobre</a>
+                </li>
+
+                <li nav-item>
+                    <a class="nav-link" href="#">Ajuda</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Perguntas Frequentes</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Entre em contato</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
 
@@ -18,8 +41,8 @@
   
         <div class="container">
    
-         <h1>Ótima escolha!</h1>
-            <p>Obrigado por comprar na Mirror Fashion!
+         <h1>Ótima Escolha!</h1>
+            <p>Obrigado por comprar na Mirror Fashion! <br>
           Preencha seus dados para efetivar a compra.
          </p>
 
@@ -32,41 +55,57 @@
     <div class="container">
         <div class="row">
 
-         <div class="col-md-4 col-xl-3" >
-             <div class="card mb-3">
+            <div class="col-md-4 col-xl-3">
+                    <div class="card mb-3">
        
-            <div class="card-header">
+                        <div class="card-header">
 
-                     <h2>Sua compra</h2>
+                         <h2>Sua compra</h2>
 
-            </div> <!-- fim card header-->
+                        </div> <!-- fim card header-->
     
-                <div class="card-body">
+                        <div class="card-body">
 
-                    <img src="img/produtos/foto1-verde.png" alt="Fuzzy Cardigan"
-                    class="img-thumbnail mb-3">
+                            <img src="img/produtos/foto1-verde.png" alt="Fuzzy Cardigan"
+                                class="img-thumbnail mb-3">
         
-                    <dl>
+                         <dl>
 
-                        <dt>Produto</dt>
-                        <dd>Fuzzy Cardigan</dd>
+                            <dt>Produto</dt>
+                            <dd>Fuzzy Cardigan</dd>
 
-                        <dt>Cor</dt>
-                        <dd>Verde</dd>
+                            <dt>Cor</dt>
+                            <dd>Verde</dd>
 
-                        <dt>Tamanho</dt>
-                        <dd>40</dd>
+                            <dt>Tamanho</dt>
+                            <dd>40</dd>
 
-                        <dt>Preço</dt>
-                        <dd>R$129,90</dd>
+                            <dt>Preço</dt>
+                            <dd id="preco">R$ 129,90</dd>
         
-                    </dl>    
+                        </dl>    
           
-                </div> <!-- fim .card-body-->
+                    </div> <!-- fim .card-body-->
     
     
-            </div> <!-- fim .card-->
-        </div>
+                </div> <!-- fim .card mb-3-->
+                <div class="card mb-3">
+                    <div class="card-body">
+
+                        <div class="form-group">
+                            <label for="qtd">Quantidade:</label>
+                            <input type="number" id="qtd" min="1" max="99" value="1" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="total">Total:</label>
+                            <output id="total" class="form-control">R$ 129,90</output>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div><!-- fim .col-md-4-->
 
             
         
@@ -88,7 +127,7 @@
 
                     <div class="form-group">
                         <label for="cpf">CPF</label>
-                            <input type="text" class="form-control" id="cpf" name="cpf" required placeholder="000.000.000-00">
+                            <input type="text" class="form-control" id="cpf" name="cpf" required placeholder="000.000.000-00" data-mask="999.999.999-99">
                     </div>
 
                     <div class="form-group custom-control custom-checkbox">
@@ -105,7 +144,7 @@
 
                     <div class="form-group">
                         <label for="numero-cartao">Número - CVV</label>
-                        <input type="text" class="form-control" id="numero-cartao" name="numero-cartao">
+                        <input type="text" class="form-control" id="numero-cartao" name="numero-cartao" data-mask="9999 9999 9999 9999 - 99">
                     </div>
 
                     <div class="form-group">
@@ -134,7 +173,10 @@
 
     </div> <!-- fim .container da pagina-->
 
- 
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/total.js"></script>
+    <script type="text/javascript" src="js/inputmask-plugin.js"></script>
     
 </body>
 </html>
